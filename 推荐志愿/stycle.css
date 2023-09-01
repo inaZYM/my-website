@@ -1,0 +1,282 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa; /* 轻微地调整背景色，使其稍微更亮一些 */
+    background-image: url('image\\image1.jpg');
+    background-size: cover;  /* 使图片填充整个视窗 */
+    background-position: center; /* 使图片居中 */
+    background-attachment: fixed; /* 使背景图片不随内容滚动 */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit; 
+    filter: blur(40px);  /* 这里的10px是模糊的程度，你可以根据需要调整 */
+    opacity: 150%;
+    z-index: -1; /* 保证背景图片在其他内容下方 */
+}
+
+.filters {
+    margin-top: 60px;
+    background-color: #394860;
+    padding: 20px; /* 增加一点填充 */
+    color: #e0f0ff; /* 调整文字颜色为淡蓝色，与背景形成对比 */
+    flex-wrap: wrap; 
+
+    
+}
+.filters h2 {
+    color: #e0f0ff; /* 使用已有的淡蓝色 */
+    font-size: 22px; /* 调整字体大小 */
+    margin-bottom: 25px; /* 为标题和筛选内容之间留出一些空间 */
+}
+
+
+.filter-section {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* 增加一点间隔 */
+}
+.button-container {
+    display: flex; 
+    flex-wrap: wrap; /* 允许内容在需要时换行 */
+}
+.filters label {
+    font-size: 16px; /* 增大字体大小 */
+    margin-right: 10px; /* 增加一点间隔 */
+    display: flex;
+    align-items: center;
+    font-weight: bold; /* 使字体加粗 */
+   
+}
+
+.filters select {
+    font-size: 14px; /* 调整字体大小 */
+    margin-left: 10px;
+    padding: 8px 15px; /* 增加一点填充 */
+    border-radius: 8px; /* 增加圆角 */
+    background-color: #4a6b8c;
+    color: #e0f0ff; /* 调整为淡蓝色 */
+    cursor: pointer;
+    transition: all 0.3s; /* 平滑的过渡效果 */
+}
+
+
+.display-container {
+    padding: 25px ;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 150px; /* 调整间隔大小 */
+    row-gap:40px; /* 行间距 */
+    column-gap: 15px; /* 列间距 */
+}
+
+.card {
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #ffffff;
+   
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s, transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px; 
+    width: 390px;
+    height: 360px;
+    cursor: pointer; /* 当鼠标移过时，会变成手势形状 */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* 轻微上升效果 */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* 更加明显的阴影 */
+}
+
+.card-header {
+    font-size: 22px;
+    background: linear-gradient(135deg, #007BFF, #007BFF);
+    color: #ffffff;
+    padding: 15px 30px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    flex-shrink: 0;
+    margin-bottom: 15px;
+}
+.card-header a {
+    text-decoration: none; /* 去除下划线 */
+    color: white; /* 设置文字颜色为白色 */
+    transition: color 0.3s; /* 添加颜色过渡效果 */
+}
+
+.card-header a:hover {
+    color: #cccccc; /* 当链接被悬停时，颜色变为浅灰色 */
+}
+
+.card-header a:active {
+    color: #999999; /* 当链接被点击时，颜色变为深灰色 */
+}
+
+.card-image {
+    transition: transform 0.5s;
+    width: 150px;  /* Fixed width */
+    height: 150px;  /* Fixed height */
+    object-fit: contain;  /* Ensure the entire image is visible */
+    margin: 10px 0;
+}
+
+.card-footer {
+    padding: 10px 25px;
+    background-color: #f5f7fa;
+    text-align: left;
+    border-top: 1px solid #e0e7ed;
+    width: 100%;
+}
+
+.card-footer a, .card-footer button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-footer a:hover, .card-footer button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.card-content-info {
+    /* display: flex; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 16px;
+    color: #007BFF;
+    width: 85%;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 0 25px;  /* Added side padding */
+}
+
+.card-rank {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+
+
+/* 使按钮更具吸引力 */
+button {
+    background-color: #e0f0ff; 
+    border: none;
+    padding: 8px 15px; /* 增加一点填充 */
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px; /* 增加圆角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    transition: all 0.3s; /* 平滑的过渡效果 */
+    transform: scale(1); /* 默认尺度 */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+}
+
+button:hover {
+    background-color: #c7d9ff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05); /* 悬停时放大5%  鼠标悬停时的阴影*/
+    transform:0.5s;
+}
+
+button.active {
+    background: linear-gradient(135deg, #0056b3, #0056b3); /* 使用渐变背景 */
+    color: #FFFFFF;
+    box-shadow: none;
+    transform: scale(0.95); /* 按下时稍微缩小 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 按下时减少阴影 */
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;       /* 这允许按钮换行 */
+    align-items: center;
+    justify-content: flex-start; /* 使按钮从左侧开始 */
+    gap: 1px;             /* 这为按钮之间提供了间隔，使得它们不会紧密相连 */
+    margin-left: 30px;    /* 与页面的左侧间隔 */
+}
+
+/* ... 保持其他样式不变 ... */
+
+.navbar {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* ... 其他样式 */
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+/* 选中时的样式 */
+.nav-link.active {
+    border-bottom: 2px solid #0056b3;
+}
+/* ...之前的样式... */
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /* 你可以自定义样式，例如添加背景、文字大小、颜色等 */
+}
