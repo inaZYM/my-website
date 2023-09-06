@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f5f9; /* 淡蓝色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("background-image.jpg") no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+
+/* ...之前的样式... */
+
+/* ...之前的样式... */
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: -500px; /* 将搜索栏向右移动一些 */
+}
+
+.search-input {
+    padding: 8px;
+    border: 2px solid #b5d9ea; /* 使用粗线淡蓝色边框 */
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 8px 12px;
+    background-color: transparent; /* 背景透明 */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #f0f5f9; /* 淡蓝色背景 */
+    border-radius: 4px;
+}
+
+.search-icon {
+    width: 20px; /* 设置搜索图标的宽度 */
+    height: 20px; /* 设置搜索图标的高度 */
+}
+
+/* ...之后的样式... */
+
+/* ...之后的样式... */
+
+/* ...之前的样式... */
+
+/* 保持原.content {
+    position: relative;
+    text-align: right;
+}有 .box 样式 */
+/* 保持原有 .box 样式 */
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content-box {
+    flex: 1; /* 占据剩余的空间 */
+    padding-right: 20px; /* 调整右边间距 */
+}
+.content-container {
+    display: flex;
+    align-items: center;
+}
+/* ...之前的样式... */
+.space-between {
+    width: 100px; /* 设置间隔的宽度 */
+}
+.box {
+    max-width: 800px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-left: auto;
+    margin-right: -0px; /* 使用负外边距将元素移到右边 */
+}
+/* ...之前的样式... */
+.left-box {
+    position: relative; /* 为按钮设置相对定位 */
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+    background-color: #c9dfff;
+    text-align: left;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s; /* 平滑过渡效果 */
+}
+
+.slide:nth-child(1) {
+    /* 默认显示第一张图片 */
+    opacity: 1;
+}
+
+.image-container img {
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+
+/* ...之后的样式... */
+
+/* 更换为淡蓝色渐变背景 */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #c9e4f7, #f0f5f9); /* 淡蓝色渐变背景 */
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* ...之后的样式... */
+
+
+.title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.score-input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.subject-buttons {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.subject-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #b5d9ea;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 科目按钮的点击效果 */
+.subject-button[data-selected="true"] {
+    background-color: #008ccf;
+}
+
+/* 按下时的颜色效果 */
+.subject-button:active {
+    background-color: #006bb3;
+}
+
+.subject-button.selected {
+    background-color: #008ccf;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.confirm-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cancel-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.confirm-button {
+    background-color: #00a0e9;
+    color: #fff;
+}
+
+.cancel-button:hover,
+.confirm-button:hover {
+    background-color: #0056b3;
+}
+/* ...之前的样式... */
+
+.navbar {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+/* 选中时的样式 */
+.nav-link.active {
+    border-bottom: 2px solid #0056b3;
+}
+/* ...之前的样式... */
+
+/* ...之前的样式... */
+.news-link {
+    display: inline-block;
+    padding: 10px 20px; /* 这将提供一些空间使文本远离椭圆的边缘 */
+    margin: 10px;
+    color: #ffffff; /* 白色文本 */
+    background-color: #b3e0ff; /* 淡蓝色背景 */
+    border-radius: 50px; /* 这将确保链接有一个椭圆形的背景 */
+    text-decoration: none;
+    transition: background-color 0.2s;
+    white-space: normal; /* 允许文本换行 */
+    font-weight: bold; /* 字体加粗 */
+    font-size: 18px; /* 字体大小。您可以根据需要调整这个值 */
+}
+
+.news-link:hover {
+    background-color: #99c2ff; /* 当鼠标悬停在链接上时的稍微深一点的蓝色 */
+}
+
+.important-info {
+    font-size: 22px;
+    font-weight: bold;
+    color: blue;
+}
+
+
+.login-register-btn {
+    display: block;
+    width: calc(100% - 20px); /* subtracting 10px on each side */
+    margin: 10px;
+    padding: 20px 0; /* increased padding for more height */
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px; 
+    font-size: 20px;
+    background-color: rgb(6, 55, 154);
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* smooth transition for transform and background-color */
+}
+
+
+.login-register-btn:hover {
+    transform: scale(1.05); /* slightly enlarge the button */
+    background-color: rgb(8, 75, 190); /* a slightly brighter blue */
+}
+
+.login-register-btn:active {
+    transform: scale(1); /* return to original size when button is clicked */
+    background-color: rgb(4, 40, 120); /* a darker blue when button is pressed */
+}
+
+
+
+.important-info-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f5f5f5;  /* 背景色 */
+    position: relative;
+    height: 30px;   /* 可根据需要调整高度 */
+}
+
+.scrolling-text {
+    font-size: 20px;   /* 设置字体大小 */
+    font-weight: bold;
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;left: 100%; /* 从右边界开始 */
+    animation: scrollText 13s linear infinite;
+    color: rgba(0, 0, 255, 0.616);   /* 蓝色字体 */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-100%);  /* 移动完整的文本宽度到左侧 */
+    }
+}
