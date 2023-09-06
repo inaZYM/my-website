@@ -1,0 +1,190 @@
+body {
+    background-color: #EAF2F8;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    padding-top: 70px; 
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .window, .suggestion-box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+
+  .window {
+    flex: 1 1 calc(33% - 20px);
+  }
+  .window1 {
+  position: relative; 
+  padding: 20px;
+  border-radius: 10px;
+}
+.window1 {
+  flex: 1 1 calc(33% - 20px);
+  position: relative; 
+  padding: 30px;  
+  border-radius: 20px;  
+}
+
+.window1::before {
+  content: "";
+  position: absolute;
+  top: 10px;    
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background-image: url('image3.jpg');  
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  border-radius: 15px;  
+  z-index: -1; 
+}
+
+.window1::after {
+  content: "";
+  position: absolute;
+  top: 0;  
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 10px solid white;  
+  border-radius: 20px;  
+  z-index: 0; 
+}
+
+
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;  /* 16:9 Aspect Ratio */
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .slideshow img {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slideshow img.active {
+    display: block;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  ol, ul {
+    margin-top: 20px;
+  }
+  .navbar {
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* ... 其他样式 */
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+/* 选中时的样式 */
+.nav-link.active {
+  border-bottom: 2px solid #0056b3;
+}
+/* ...之前的样式... */
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  /* 你可以自定义样式，例如添加背景、文字大小、颜色等 */
+}
+#expertConsultationBtn {
+  font-size: 18px;           /* 调整字体大小 */
+  background-color: #007bff; /* 蓝色背景 */
+  color: #ffffff;            /* 字体颜色 */
+  padding: 10px 20px;        /* 内边距 */
+  border-radius: 20px;       /* 圆滑边框 */
+  border: none;              /* 无边框 */
+  cursor: pointer;           /* 当鼠标移动到按钮上时，显示为手指形状 */
+  transition: 0.3s;          /* 过渡效果，使得按钮在悬停时有平滑的变化 */
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+#expertConsultationBtn:hover {
+  background-color: #0056b3; /* 当鼠标悬停在按钮上时的背景颜色 */
+  
+}
