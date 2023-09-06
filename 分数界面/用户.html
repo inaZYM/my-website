@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志愿填报系统</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="image/image2.jpg" alt="Logo" class="logo-img">
+            <li class="nav-item"><a href="#" class="nav-link">AI志愿推荐平台
+            </a></li>
+        </div>
+        
+        <ul class="nav-list">
+            <li class="nav-item"><a href="../首页界面/index.html" class="nav-link" target="_blank">首页</a></li>
+            <!-- 我还没写 -->
+            <li class="nav-item"><a href="../院校/index.html" class="nav-link" target="_blank">院校查询</a></li>
+            <li class="nav-item"><a href="../专家咨询/ss.html" class="nav-link" target="_blank">专家咨询</a></li>
+            <li class="nav-item"><a href="用户.html" class="nav-link">分数推荐</a></li>
+            <li class="nav-item">
+                <a href="../index.html" id="logoutLink" class="nav-link" onclick="return confirmLogout()">退出/注销</a>
+            </li>
+            
+            
+        </ul>
+    </div>
+    <div class="container">
+        <h2>志愿推荐</h2>
+        <form id="volunteerForm">
+            <label class="bold-label" for="score">分数:</label>
+            <input type="number" id="score" name="score" required>
+        
+            <label class="bold-label" for="ranking">位次:</label>
+            <input type="number" id="ranking" name="ranking" required>
+        
+            <label class="bold-label">选择科目(只能选择三门):</label>
+            <div class="subjects">
+                <label class="subject-button">
+                    <input type="checkbox" id="physics" name="subjects" value="物理">
+                    <span>物理</span>
+                </label>
+                <label class="subject-button">
+                    <input type="checkbox" id="chemistry" name="subjects" value="化学">
+                    <span>化学</span>
+                </label>
+                <label class="subject-button">
+                    <input type="checkbox" id="biology" name="subjects" value="生物">
+                    <span>生物</span>
+                </label>
+                <br>
+                <label class="subject-button">
+                    <input type="checkbox" id="politics" name="subjects" value="政治">
+                    <span>政治</span>
+                </label>
+                <label class="subject-button">
+                    <input type="checkbox" id="history" name="subjects" value="历史">
+                    <span>历史</span>
+                </label>
+                <label class="subject-button">
+                    <input type="checkbox" id="geography" name="subjects" value="地理">
+                    <span>地理</span>
+                </label>
+            </div>
+
+            <button type="submit">开启您专属的志愿推荐</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
