@@ -1,0 +1,163 @@
+/* 注册 & 登录通用样式 */
+body {
+    background: #eef7fb;
+    /* position: relative;  */
+    font-family: 'Microsoft YaHei', 'Heiti', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #004d7a;
+}
+h2 {
+    text-align: center;
+    color: #004d7a;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+input[type="text"], input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b0c4de;
+    border-radius: 4px;
+    background-color: #f4f7fc;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0077b6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #005088;
+}
+.container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 120px;
+    position: relative; 
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-image: url('image1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;  /* 添加这一行 */
+    /* filter: blur(5px); */
+    z-index: -1; /* 确保背景在内容下方 */
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px); /* 上移20像素 */
+    pointer-events: none; /* 确保隐藏的表单不会响应鼠标点击 */
+    position: absolute;   /* 让表单占据相同的空间，不会影响页面布局 */
+    width: 100%;
+    display: none; 
+}
+
+.smallButton {
+    display: block;
+    background: none;
+    border: none;
+    color: #0077b6;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.smallButton:hover {
+    text-decoration: underline;
+}
+
+
+
+/*导航*/
+.navbar {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* ... 其他样式 */
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+.nav-link1 {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link1:hover {
+    color: #0056b3;
+}
+/* 选中时的样式 */
+.nav-link.active {
+    border-bottom: 2px solid #0056b3;
+}
+/* ...之前的样式... */
